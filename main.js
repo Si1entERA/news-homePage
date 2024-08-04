@@ -1,15 +1,18 @@
 const hamburgerMenu = document.querySelector('.hamburgerMenu');
-const close = document.querySelector('.close');
+const closeSidebar = document.querySelector('.close');
 
 const sidebar = document.querySelector('.sidebar')
+const body = document.body;
 
 const closeMenu = () => {
-  sidebar.style.display = 'none';
+  sidebar.classList.remove('open')
+  body.classList.remove('lock')
 }
 
 const openMenu = () => {
-  sidebar.style.display = 'flex'
+  sidebar.classList.add('open')
+  body.classList.add('lock')
 }
 
-close.addEventListener('click', closeMenu)
+closeSidebar.addEventListener('click', closeMenu)
 hamburgerMenu.addEventListener('click', openMenu)
