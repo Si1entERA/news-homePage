@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="news homepage">
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
@@ -13,14 +15,14 @@
 </head>
 <body>
   <main class="main">
-    
+    <div id="overlay"></div>
     <header>
       <img src="./assets/images/logo.svg" alt="logo">
       <!-- <img src="./assets/images/icon-menu.svg" alt="hamburger menu"> -->
-      <nav>
+      <nav aria-live="polite">
         <!-- Sidebar -->
         <ul class="sidebar">
-          <li class="close"><a href="#"><img src="./assets/images/icon-menu-close.svg" alt="close icon"></a></li>
+          <li class="close" aria-label="close menu button"><a href="#"><img src="./assets/images/icon-menu-close.svg" alt="close icon"></a></li>
           <li><a href="#">Home</a></li>
           <li><a href="#">New</a></li>
           <li><a href="#">Popular</a></li>
@@ -37,27 +39,33 @@
           <li><a href="#">Categories</a></li>
         </ul>
       </nav>
-      <img class="hamburgerMenu" src="./assets/images/icon-menu.svg" alt="hamburger menu">
+      <img class="hamburgerMenu" aria-label="open menu button" src="./assets/images/icon-menu.svg" alt="hamburger menu">
     </header>
 
-    <section id="hero-img">
+    <section id="hero-img-mobile">
       <img src="./assets/images/image-web-3-mobile.jpg" alt="hero image">
+    </section>
+
+    <section id="hero-img-desktop">
+      <img src="./assets/images/image-web-3-desktop.jpg" alt="hero image">
     </section>
 
     <section id="title">
       <h1>The Bright Future of Web 3.0?</h1>
     </section>
 
-    <section id="description">
-      <p>
-        We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-        But is it really fulfilling its promise?
-      </p>
-    </section>
-
-    <section id="read-more">
-      <button>READ MORE</button>
-    </section>
+    <div class="desc-box">
+      <section id="description">
+        <p>
+          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+          But is it really fulfilling its promise?
+        </p>
+      </section>
+  
+      <section id="read-more">
+        <button>READ MORE</button>
+      </section>
+    </div>
     <article class="new-news-box">
       <h1>New</h1>
       <section class="new-news">
@@ -117,43 +125,6 @@
       </section>
     </article>
   </main>
-
-  <!-- Home
-  New
-  Popular
-  Trending
-  Categories
-
-  The Bright Future of Web 3.0?
-
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
-
-  Read more
-
-  New 
-
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-   -->
 </body>
 <script src="main.js"></script>
 </html>
